@@ -15,7 +15,6 @@ class AppointmentController extends Controller
     public function index()
     {
         $appointments = Appointment::with('user')
-            ->orderBy('schedulec_at', 'asc')
             ->paginate(10);
 
         return view('appointments.index', compact('appointments'));

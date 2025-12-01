@@ -35,5 +35,9 @@ class CreateNewUser implements CreatesNewUsers
             'email' => $input['email'],
             'password' => $input['password'],
         ]);
+
+        // Asignar rol por defecto
+        $user->assignRole('user');
+
     }
 }

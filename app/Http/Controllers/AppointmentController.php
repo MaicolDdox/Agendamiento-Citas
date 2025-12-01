@@ -62,7 +62,7 @@ class AppointmentController extends Controller
     public function edit(Appointment $appointment)
     {
         $users = User::orderBy('name')->get();
-        return view('appointments.create', compact('users', 'appointment'));
+        return view('appointments.edit', compact('users', 'appointment'));
     }
 
     /**

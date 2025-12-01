@@ -23,6 +23,15 @@ class Appointment extends Model
         'notes',
     ];
 
+    /**
+     * Casts for native types.
+     *
+     * @var array<string, string>
+     */
+    protected $casts = [
+        'scheduled_at' => 'datetime',
+    ];
+
     //Relaciones
     public function user():BelongsTo
     {
